@@ -5,7 +5,7 @@
         android:title= "Send feedback"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/cll"
-        android:title= "Call Us"
+    <item android:id="@+id/rst"
+        android:title= "Reset Screen"
         app:showAsAction="never"/>
 </menu>

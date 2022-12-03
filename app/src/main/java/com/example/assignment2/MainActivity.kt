@@ -1,5 +1,6 @@
 package com.example.assignment2
 
+import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -106,8 +107,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
     }
+
+
 
 
 
@@ -127,10 +129,22 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            R.id.cll-> {
+            R.id.rst-> {
+                val n1: TextView = findViewById(R.id.n1)
+                val n2: TextView = findViewById(R.id.n2)
+                val total: TextView = findViewById(R.id.total)
+                val main_spinner : Spinner = findViewById(R.id.main_spinner)
+                val main_op = arrayOf("none","Pizza ($7)","Shawerma ($3)","Burger ($5)")
+                main_spinner.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,main_op)
+                n1.text = 1.toString()
+
+                val drink_spinner : Spinner = findViewById(R.id.drink_spinner)
+                val drink_op = arrayOf("none", "Pepsi ($1)", "7-up ($1)", "Juice ($2)")
+                drink_spinner.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,drink_op)
+                n2.text = 1.toString()
 
 
-                Toast.makeText(this, "Number copied", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Screen was reset", Toast.LENGTH_SHORT).show()
 
 
 
@@ -139,4 +153,6 @@ class MainActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
+
+    
 }
